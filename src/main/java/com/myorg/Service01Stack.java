@@ -59,7 +59,7 @@ public class Service01Stack extends Stack {
         service01.getTargetGroup().configureHealthCheck(healthCheck);
 
         ScalableTaskCount scalableTaskCount = service01.getService().autoScaleTaskCount(EnableScalingProps.builder()
-                .maxCapacity(2)
+                .minCapacity(2)
                 .maxCapacity(4)
                 .build());
 
